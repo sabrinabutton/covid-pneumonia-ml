@@ -1,4 +1,4 @@
-# Covid Pneumonia Classification Deep Learning 
+# Covid/Pneumonia Classification Deep Learning 
 
 [Dataset from Kraggle](https://www.kaggle.com/pranavraikokte/covid19-image-dataset)
 
