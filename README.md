@@ -4,4 +4,4 @@
 
 Accuracy: 83%
 
-![Plots](http://github.com/sabrinabutton/covid-pneumonia-ml/static/my_plots.png)
+![Plots](https://github.com/sabrinabutton/covid-pneumonia-ml/blob/main/static/my_plots.png)
