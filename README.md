@@ -1,7 +1,7 @@
-# Covid Pneumonia Classification Deep Learning 
+# Covid/Pneumonia Classification Deep Learning 
 
 [Dataset from Kraggle](https://www.kaggle.com/pranavraikokte/covid19-image-dataset)
 
-Accuracy: 83%
+Accuracy: 83% (work in progress)
 
-![Plots](http://github.com/sabrinabutton/covid-pneumonia-ml/static/my_plots.png)
+![Plots](https://github.com/sabrinabutton/covid-pneumonia-ml/blob/main/static/my_plots.png)
