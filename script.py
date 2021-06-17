@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -6,7 +7,8 @@ from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras import layers
 import kerastuner as kt
 import matplotlib.pyplot as plt
-
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 
 def generate_data():
     training_data_generator = ImageDataGenerator(
@@ -96,3 +98,16 @@ history = model.fit(training_iterator,validation_data=testing_iterator,  epochs=
 eval_result = model.evaluate(testing_iterator)
 print("[test loss, test accuracy]:", eval_result)
 generate_plot(history)
+
+# Generate classification report and confusion matrix
+test_steps_per_epoch = np.math.ceil(testing_iterator.samples / testing_iterator.batch_size)
+predictions = model.predict(testing_iterator, steps=test_steps_per_epoch)
+test_steps_per_epoch = np.math.ceil(testing_iterator.samples / testing_iterator.batch_size)
+predicted_classes = np.argmax(predictions, axis=1)
+true_classes = testing_iterator.classes
+class_labels = list(testing_iterator.class_indices.keys())
+report = classification_report(true_classes, predicted_classes, target_names=class_labels)
+print(report)   
+ 
+cm=confusion_matrix(true_classes,predicted_classes)
+print(cm)
