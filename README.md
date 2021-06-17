@@ -2,6 +2,6 @@
 
 [Dataset from Kraggle](https://www.kaggle.com/pranavraikokte/covid19-image-dataset)
 
-Accuracy: 83% (work in progress)
+Accuracy on Tests: 88% (work in progress)
 
 ![Plots](https://github.com/sabrinabutton/covid-pneumonia-ml/blob/main/static/my_plots.png)
